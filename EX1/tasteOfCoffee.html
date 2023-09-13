@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Share Your Taste of Coffee </title>
+        <meta name="keywords" content="KFUPM, SWE, Software Engineering">
+    </head>
+    <body>
+        <main>
+            <h1> Share Your Taste of Coffee </h1>
+            <fieldset>
+                <legend> Fill the form to recieve a beans reccomendation! </legend>
+                <form action="confirmationPage.html">
+                    <h4> General Information </h4>
+                    <div>
+                        <label for="name"> Name: </label>
+                        <input type="text" autocomplete="name" required>
+                    </div>
+                    <div>
+                        <label for="DoB"> Date of Birth: </label>
+                        <input type="date" autocomplete="bday-day" required>
+                    </div>
+                    <div>
+                        <label for="email"> Email: </label>
+                        <input type="email" autocomplete="email" required>
+                    </div>
+                    <section>
+                        <label for="countries">Country:</label>
+                        <input type="text" id="countries" name="countries" list="countryList">
+                        <datalist id="countryList">
+                            <option value="Bahrain">
+                            <option value="Cyprus">
+                            <option value="Egypt">
+                            <option value="Iran">
+                            <option value="Iraq">
+                            <option value="Israel">
+                            <option value="Jordan">
+                            <option value="Kuwait">
+                            <option value="Lebanon">
+                            <option value="Oman">
+                            <option value="Palestine">
+                            <option value="Qatar">
+                            <option value="Saudi Arabia">
+                            <option value="Syria">
+                            <option value="Turkey">
+                            <option value="United Arab Emirates">
+                            <option value="Yemen">
+                        </datalist>
+                    </section>
+                    <h4> Survey Questions </h4>
+                    <section>
+                        <fieldset>
+                            <legend> Select the coffee sources you like the most </legend>
+                            <div>
+                                <input type="checkbox" id="ethiopia" name="ethiopia">
+                                <label for="ethiopia"> 🇪🇹 Ethiopia </label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="brazil" name="brazil">
+                                <label for="brazil"> 🇧🇷 Brazil </label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="colombia" name="colombia">
+                                <label for="colombia"> 🇨🇴 Colombia </label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="costarica" name="costarica">
+                                <label for="costarica"> 🇨🇷 Costa Rica </label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="guatemala" name="guatemala">
+                                <label for="guatemala"> 🇬🇹 Guatemala </label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="peru" name="peru">
+                                <label for="peru"> 🇵🇪 Peru </label>
+                            </div>
+                        </fieldset>
+                    </section>
+                    <section>
+                        <fieldset>
+                            <legend> Rate each of the following to your liking </legend>
+                            <div>
+                                <input type="range" id="acidity" name="acidity" min="0" max="5">
+                                <label for="acidity"> Acidity </label>
+                            </div>
+                            <div>
+                                <input type="range" id="bitterness" name="bitterness" min="0" max="5">
+                                <label for="bitterness"> Bitterness </label>
+                            </div>
+                            <div>
+                                <input type="range" id="sweetness" name="sweetness" min="0" max="5">
+                                <label for="sweetness"> Sweetness </label>
+                            </div>
+                            <div>
+                                <input type="range" id="body" name="body" min="0" max="5">
+                                <label for="body"> Body (Mouthfeel) </label>
+                            </div>
+                        </fieldset>
+                    </section>
+                    <section>
+                        <fieldset>
+                            <legend> Choose the type of roast you like </legend>
+                            <div>
+                                <input type="radio" id="light" name="light">
+                                <label for="light"> Light Roast </label>
+                            </div>
+                            <div>
+                                <input type="radio" id="medium" name="medium">
+                                <label for="medium"> Medium Roast </label>
+                            </div>
+                            <div>
+                                <input type="radio" id="dark" name="dark">
+                                <label for="dark"> Dark Roast </label>
+                            </div>
+                        </fieldset>
+                    </section>
+                    <section>
+
+                    </section>
+                    <h6></h6>
+                    <input type="submit" value="Send Request">
+                </form>
+            </fieldset>
+        </main>
+        <footer>
+            <p>© 2023 l3b3al</p>
+            <a href="contactMe.html"> Contact me </a>
+        </footer>
+    </body>
+</html>
