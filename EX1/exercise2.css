@@ -1,0 +1,73 @@
+th {
+    text-transform: uppercase;
+}
+
+a {
+    color: green;
+}
+
+.top {
+    background-color: red;
+}
+
+em {
+    background-color: blue;
+}
+
+#the_most_important {
+    text-transform: uppercase;
+    background-color: gold;
+}
+
+h2 {
+    font-family: sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+}
+
+h2::first-letter {
+    font-size: x-large;
+}
+
+tr:hover {
+    background-color: lightblue;
+}
+
+tr:hover td {
+    background-color: lightblue;
+}
+
+nav ul {
+    display: inline;
+}
+
+nav li {
+    display: inline;
+}
+
+nav li a {
+    text-decoration: none;
+}
+
+nav li:first-child a {
+    text-decoration: underline;
+}
+
+::selection {
+    background-color: yellow;
+    color: black;
+}
+
+input {
+    height: 20px;
+}
+
+input[type="text"] {
+    border-color: lightgray;
+}
+
+input[type="message"] {
+    height: 50px;
+}
