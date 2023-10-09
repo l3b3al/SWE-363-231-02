@@ -39,7 +39,7 @@
             background-color: beige;
             width: 150px;
             height: 150px;
-            border: 1px solid black;
+            border: 2px solid black;
             text-align: center;
             display: flex;
             justify-content: center;
@@ -59,6 +59,37 @@
 
         .row {
             display: flex;
+        }
+
+        #helpBtn {
+            margin-top: 32px;
+            padding: 8px 16px;
+            font-size: 20px;
+            border-radius: 15px;
+            background-color: coral;
+            border-width: 0px;
+        }
+
+        #helpBtn:hover {
+            background-color: orangered;
+            cursor: pointer;
+        }
+
+        #help {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ccc;
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            text-align: center;
+            color: #10002B;
+        }
+
+        .cell.selected {
+            border: 2px solid orangered;
         }
     </style>
 </head>
@@ -87,8 +118,69 @@
 
         <div><button id="restart">Restart Game</button></div>
 
+        <div><button id="helpBtn">Show Help</button></div>
+
+        <div id="help" style="display:none;">
+            <p>Use arrow keys to navigate between cells.</p>
+            <p>Press 'Enter' to make a move.</p>
+            <p>Press 'H' to toggle this help popup.</p>
+        </div>
+
         <script>
-            
+            document.addEventListener('DOMContentLoaded', () => {
+                let cells = document.querySelectorAll('.cell');
+                let helpBtn = document.getElementById('helpBtn');
+                let help = document.getElementById('help');
+                let selectedIndex = 0;
+
+                helpBtn.addEventListener('click', toggleHelp);
+                window.addEventListener('keydown', handleKeydown);
+
+                function toggleHelp() {
+                    help.style.display = help.style.display === 'none' ? 'block' : 'none';
+                }
+
+                function handleKeydown(event) {
+                    switch (event.key) {
+                        case 'ArrowUp':
+                            if (selectedIndex >= 3) selectedIndex -= 3;
+                            break;
+                        case 'ArrowDown':
+                            if (selectedIndex <= 5) selectedIndex += 3;
+                            break;
+                        case 'ArrowLeft':
+                            if (selectedIndex % 3 !== 0) selectedIndex -= 1;
+                            break;
+                        case 'ArrowRight':
+                            if (selectedIndex % 3 !== 2) selectedIndex += 1;
+                            break;
+                        case 'Enter':
+                            cellClicked(cells[selectedIndex]);
+                            break;
+                        case 'h':
+                        case 'H':
+                            toggleHelp();
+                            break;
+                        default:
+                            return;
+                    }
+                    updateSelection();
+                }
+
+                function updateSelection() {
+                    cells.forEach(cell => cell.classList.remove('selected'));
+                    cells[selectedIndex].classList.add('selected');
+                }
+
+                function cellClicked(cell) {
+                    if (gameEnded || cell.innerText !== "") return;
+                    cell.innerText = turn;
+                    // ... (rest of your cellClicked logic)
+                }
+
+                updateSelection();
+            });
+
             let turn = "X";
             let gameEnded = false;
             let title = document.querySelector("#turn");
