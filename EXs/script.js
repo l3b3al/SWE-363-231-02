@@ -28,4 +28,4 @@ function fillSkills(){
     }
 }
 
-fillSkills()
+fillSkills();

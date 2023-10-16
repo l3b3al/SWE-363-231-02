@@ -1,131 +1,234 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> Share Your Taste of Coffee </title>
-        <meta name="keywords" content="KFUPM, SWE, Software Engineering">
-        <link rel="stylesheet" href="exercise2.css">
-    </head>
-    <body>
-        <main>
-            <h1> Share Your Taste of Coffee </h1>
-            <fieldset>
-                <legend> Fill the form to recieve a beans reccomendation! </legend>
-                <form action="confirmationPage.html">
-                    <h4> General Information </h4>
-                    <div>
-                        <label for="name"> Name: </label>
-                        <input type="text" autocomplete="name" required>
-                    </div>
-                    <div>
-                        <label for="DoB"> Date of Birth: </label>
-                        <input type="date" autocomplete="bday-day" required>
-                    </div>
-                    <div>
-                        <label for="email"> Email: </label>
-                        <input type="email" autocomplete="email" required>
-                    </div>
-                    <section>
-                        <label for="countries">Country:</label>
-                        <input type="text" id="countries" name="countries" list="countryList">
-                        <datalist id="countryList">
-                            <option value="Bahrain">
-                            <option value="Cyprus">
-                            <option value="Egypt">
-                            <option value="Iran">
-                            <option value="Iraq">
-                            <option value="Israel">
-                            <option value="Jordan">
-                            <option value="Kuwait">
-                            <option value="Lebanon">
-                            <option value="Oman">
-                            <option value="Palestine">
-                            <option value="Qatar">
-                            <option value="Saudi Arabia">
-                            <option value="Syria">
-                            <option value="Turkey">
-                            <option value="United Arab Emirates">
-                            <option value="Yemen">
-                        </datalist>
-                    </section>
-                    <h4> Survey Questions </h4>
-                    <section>
-                        <fieldset>
-                            <legend> Select the coffee sources you like the most </legend>
-                            <div>
-                                <input type="checkbox" id="ethiopia" name="ethiopia">
-                                <label for="ethiopia"> 🇪🇹 Ethiopia </label>
-                            </div>
-                            <div>
-                                <input type="checkbox" id="brazil" name="brazil">
-                                <label for="brazil"> 🇧🇷 Brazil </label>
-                            </div>
-                            <div>
-                                <input type="checkbox" id="colombia" name="colombia">
-                                <label for="colombia"> 🇨🇴 Colombia </label>
-                            </div>
-                            <div>
-                                <input type="checkbox" id="costarica" name="costarica">
-                                <label for="costarica"> 🇨🇷 Costa Rica </label>
-                            </div>
-                            <div>
-                                <input type="checkbox" id="guatemala" name="guatemala">
-                                <label for="guatemala"> 🇬🇹 Guatemala </label>
-                            </div>
-                            <div>
-                                <input type="checkbox" id="peru" name="peru">
-                                <label for="peru"> 🇵🇪 Peru </label>
-                            </div>
-                        </fieldset>
-                    </section>
-                    <section>
-                        <fieldset>
-                            <legend> Rate each of the following to your liking </legend>
-                            <div>
-                                <input type="range" id="acidity" name="acidity" min="0" max="5">
-                                <label for="acidity"> Acidity </label>
-                            </div>
-                            <div>
-                                <input type="range" id="bitterness" name="bitterness" min="0" max="5">
-                                <label for="bitterness"> Bitterness </label>
-                            </div>
-                            <div>
-                                <input type="range" id="sweetness" name="sweetness" min="0" max="5">
-                                <label for="sweetness"> Sweetness </label>
-                            </div>
-                            <div>
-                                <input type="range" id="body" name="body" min="0" max="5">
-                                <label for="body"> Body (Mouthfeel) </label>
-                            </div>
-                        </fieldset>
-                    </section>
-                    <section>
-                        <fieldset>
-                            <legend> Choose the type of roast you like </legend>
-                            <div>
-                                <input type="radio" id="light" name="light">
-                                <label for="light"> Light Roast </label>
-                            </div>
-                            <div>
-                                <input type="radio" id="medium" name="medium">
-                                <label for="medium"> Medium Roast </label>
-                            </div>
-                            <div>
-                                <input type="radio" id="dark" name="dark">
-                                <label for="dark"> Dark Roast </label>
-                            </div>
-                        </fieldset>
-                    </section>
-                    <section>
 
-                    </section>
-                    <h6></h6>
-                    <input type="submit" value="Send Request">
-                </form>
-            </fieldset>
-        </main>
-        <footer>
-            <p>© 2023 l3b3al</p>
-            <a href="contactMe.html"> Contact me </a>
-        </footer>
-    </body>
+<head>
+    <title> Share Your Taste of Coffee </title>
+    <meta name="keywords" content="KFUPM, SWE, Software Engineering">
+    <link rel="stylesheet" href="exercise2.css">
+</head>
+
+<style>
+    #signaturePad {
+        border: 2px solid #222;
+        width: 500px;
+        height: 300px;
+    }
+</style>
+
+<body>
+    <main>
+        <h1> Share Your Taste of Coffee </h1>
+        <fieldset>
+            <legend> Fill the form to recieve a beans reccomendation! </legend>
+            <form action="confirmationPage.html">
+                <h4> General Information </h4>
+                <div>
+                    <label for="name"> Name: </label>
+                    <input type="text" autocomplete="name" required>
+                </div>
+                <div>
+                    <label for="DoB"> Date of Birth: </label>
+                    <input type="date" autocomplete="bday-day" required>
+                </div>
+                <div>
+                    <label for="email"> Email: </label>
+                    <input type="email" autocomplete="email" required>
+                </div>
+                <section>
+                    <label for="countries">Country:</label>
+                    <input type="text" id="countries" name="countries" list="countryList">
+                    <datalist id="countryList">
+                        <option value="Bahrain">
+                        <option value="Cyprus">
+                        <option value="Egypt">
+                        <option value="Iran">
+                        <option value="Iraq">
+                        <option value="Israel">
+                        <option value="Jordan">
+                        <option value="Kuwait">
+                        <option value="Lebanon">
+                        <option value="Oman">
+                        <option value="Palestine">
+                        <option value="Qatar">
+                        <option value="Saudi Arabia">
+                        <option value="Syria">
+                        <option value="Turkey">
+                        <option value="United Arab Emirates">
+                        <option value="Yemen">
+                    </datalist>
+                </section>
+                <h4> Survey Questions </h4>
+                <section>
+                    <fieldset>
+                        <legend> Select the coffee sources you like the most </legend>
+                        <div>
+                            <input type="checkbox" id="ethiopia" name="ethiopia">
+                            <label for="ethiopia"> 🇪🇹 Ethiopia </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="brazil" name="brazil">
+                            <label for="brazil"> 🇧🇷 Brazil </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="colombia" name="colombia">
+                            <label for="colombia"> 🇨🇴 Colombia </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="costarica" name="costarica">
+                            <label for="costarica"> 🇨🇷 Costa Rica </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="guatemala" name="guatemala">
+                            <label for="guatemala"> 🇬🇹 Guatemala </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="peru" name="peru">
+                            <label for="peru"> 🇵🇪 Peru </label>
+                        </div>
+                    </fieldset>
+                </section>
+                <section>
+                    <fieldset>
+                        <legend> Rate each of the following to your liking </legend>
+                        <div>
+                            <input type="range" id="acidity" name="acidity" min="0" max="5">
+                            <label for="acidity"> Acidity </label>
+                        </div>
+                        <div>
+                            <input type="range" id="bitterness" name="bitterness" min="0" max="5">
+                            <label for="bitterness"> Bitterness </label>
+                        </div>
+                        <div>
+                            <input type="range" id="sweetness" name="sweetness" min="0" max="5">
+                            <label for="sweetness"> Sweetness </label>
+                        </div>
+                        <div>
+                            <input type="range" id="body" name="body" min="0" max="5">
+                            <label for="body"> Body (Mouthfeel) </label>
+                        </div>
+                    </fieldset>
+                </section>
+                <section>
+                    <fieldset>
+                        <legend> Choose the type of roast you like </legend>
+                        <div>
+                            <input type="radio" id="light" name="light">
+                            <label for="light"> Light Roast </label>
+                        </div>
+                        <div>
+                            <input type="radio" id="medium" name="medium">
+                            <label for="medium"> Medium Roast </label>
+                        </div>
+                        <div>
+                            <input type="radio" id="dark" name="dark">
+                            <label for="dark"> Dark Roast </label>
+                        </div>
+                    </fieldset>
+                </section>
+                <section>
+                    <fieldset>
+                        <legend>Signature</legend>
+                        <div>
+                            <div class="signature-container">
+                                <canvas id="signaturePad"></canvas>
+                                <br>
+                                <button id="clearSignature">Clear Signature</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </section>
+                <h6></h6>
+                <input type="hidden" id="signatureInput" name="signature" value="">
+                <input type="submit" value="Send Request">
+            </form>
+        </fieldset>
+    </main>
+    <footer>
+        <p>© 2023 l3b3al</p>
+        <a href="contactMe.html"> Contact me </a>
+    </footer>
+</body>
+
+<script>
+    (function () {
+        var canvas = document.getElementById("signaturePad");
+        var ctx = canvas.getContext("2d");
+        ctx.strokeStyle = "#222222";
+        ctx.lineWidth = 4;
+
+        var drawing = false;
+        var mousePos = {
+            x: 0,
+            y: 0
+        };
+        var lastPos = mousePos;
+
+        canvas.addEventListener("mousedown", function (e) {
+            drawing = true;
+            lastPos = getMousePos(canvas, e);
+        }, false);
+
+        canvas.addEventListener("mouseup", function (e) {
+            drawing = false;
+        }, false);
+
+        canvas.addEventListener("mousemove", draw, false);
+
+        canvas.addEventListener("touchstart", function (e) {
+            mousePos = getTouchPos(canvas, e);
+            var touch = e.touches[0];
+            var me = new MouseEvent("mousedown", {
+                clientX: touch.clientX,
+                clientY: touch.clientY
+            });
+            canvas.dispatchEvent(me);
+        }, false);
+
+        canvas.addEventListener("touchmove", function (e) {
+            var touch = e.touches[0];
+            var me = new MouseEvent("mousemove", {
+                clientX: touch.clientX,
+                clientY: touch.clientY
+            });
+            canvas.dispatchEvent(me);
+        }, false);
+
+        canvas.addEventListener("touchend", function (e) {
+            var me = new MouseEvent("mouseup", {});
+            canvas.dispatchEvent(me);
+        }, false);
+
+        function getMousePos(canvasDom, mouseEvent) {
+            var rect = canvasDom.getBoundingClientRect();
+            return {
+                x: mouseEvent.clientX - rect.left,
+                y: mouseEvent.clientY - rect.top
+            };
+        }
+
+        function getTouchPos(canvasDom, touchEvent) {
+            var rect = canvasDom.getBoundingClientRect();
+            return {
+                x: touchEvent.touches[0].clientX - rect.left,
+                y: touchEvent.touches[0].clientY - rect.top
+            };
+        }
+
+        function draw(e) {
+            mousePos = getMousePos(canvas, e);
+            if (drawing) {
+                ctx.moveTo(lastPos.x, lastPos.y);
+                ctx.lineTo(mousePos.x, mousePos.y);
+                ctx.stroke();
+                lastPos = mousePos;
+            }
+        }
+
+        var clearBtn = document.getElementById("clearSignature");
+        clearBtn.addEventListener("click", function (e) {
+            canvas.width = canvas.width;
+        }, false);
+    })();
+</script>
+
 </html>

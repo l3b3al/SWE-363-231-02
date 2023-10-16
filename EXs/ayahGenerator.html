@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Ayah Generator </title>
+    <meta name="keywords" content="KFUPM, SWE, Software Engineering">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    * {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    body {
+        background-color: #030712;
+        font-family: 'Inter', sans-serif;
+        color: #D1D5DB;
+        word-wrap: break-word;
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    #container {
+        padding: 64px 16px;
+        flex: 1 1 0;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 48px;
+        display: inline-flex;
+        height: 100%;
+        width: 100%;
+    }
+
+    #heading {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        gap: 16px;
+    }
+
+    #ayahC {
+        background-color: #374151;
+        height: 256px;
+        width: 512px;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        display: flex;
+        border-radius: 15px;
+    }
+
+    #generate {
+        background-color: #3C096C;
+        color: #D1D5DB;
+        font-size: 24px;
+        padding: 16px 24px;
+        border-radius: 15px;
+        border-width: 0px;
+    }
+</style>
+
+<body>
+    <div id="container">
+        <div id="heading">
+            <h1>Generate Ayah</h1>
+            <p>A random ayah generator</p>
+        </div>
+        <div id="ayahC">
+            <div><p id="ayah"></p></div>
+        </div>
+        <div><button id="generate">Generate</button></div>
+    </div>
+</body>
+
+<script>
+    document.getElementById('generate').addEventListener('click', function () {
+        generateAyah();
+    });
+
+    async function generateAyah() {
+        const res = await fetch('https://api.quran.com/api/v4/quran/verses/uthmani');
+        const allAyat = await res.json();
+        console.log(allAyat);
+
+        let randomAyahNumber = Math.floor(Math.random() * allAyat.verses.length);
+
+        document.getElementById('ayah').innerHTML = allAyat.verses[randomAyahNumber].text_uthmani;
+        
+    }
+</script>
+
+</html>

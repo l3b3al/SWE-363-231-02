@@ -2,109 +2,144 @@
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> Ali's Blog </title>
-        <meta name="keywords" content="KFUPM, SWE, Software Engineering">
-        <link rel="stylesheet" href="mainStyle.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    </head>
-    <body>
-        <header>
-            <div id="headerContainer">
-                <div id="title">
-                    l3b3al
-                    <a id="language" href="index-ar.html">Arabic</a>
+
+<head>
+    <title> Ali's Blog </title>
+    <meta name="keywords" content="KFUPM, SWE, Software Engineering">
+    <link rel="stylesheet" href="mainStyle.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <link rel="stylesheet" href="screensaver.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="screensaver.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div id="headerContainer">
+            <div id="title">
+                l3b3al
+                <a id="language" href="index-ar.html">Arabic</a>
+            </div>
+            <div id="menuFrame">
+                <div id="menu">
+                    <div class="material-symbols-outlined">
+                        menu
+                    </div>
                 </div>
-                <div id="menuFrame">
-                    <div id="menu">
-                        <div class="material-symbols-outlined">
-                            menu
+            </div>
+        </div>
+    </header>
+
+    <div id="loader"></div>
+
+    <article id="content">
+        <section class="frame">
+            <div class="container">
+                <section class="picContainer">
+                    <div class="picFrame">
+                        <div class="picBackground"></div>
+                        <img class="pic" src="assets/pp.png" />
+                    </div>
+                </section>
+
+                <section id="welcomeTextContainer">
+                    <div id="welcomeText">
+                        <div>
+                            <h1>Hi, I'm Ali 👋</h1>
+                        </div>
+                        <div>
+                            <p>I'm a Junior Software Engineer at KFUPM interested in web & mobile development, and UI/UX
+                                design.</p>
+                        </div>
+                    </div>
+
+                    <div id="availabilityContainer">
+                        <div id="location">
+                            <div class="material-symbols-outlined">
+                                location_on
+                            </div>
+                            <div>
+                                <p>Qatif, Saudi Arabia</p>
+                            </div>
+                        </div>
+
+                        <div id="availability">
+                            <div id="availableFlagContainer">
+                                <div id="availableFlag"></div>
+                            </div>
+                            <div>
+                                <p>Available for new projects</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div id="actions">
+                        <div id="actionsContainer">
+                            <div id="gitHubActionContainer">
+                                <a href="https://github.com/l3b3al" target="_blank"><img id="gitHubAction"
+                                        src="assets/github.png" alt=""></a>
+                            </div>
+
+                            <div id="twitterActionContainer">
+                                <a href="https://twitter.com/l3b3al" target="_blank"><img id="twitterAction"
+                                        src="assets/twitter.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <div id="skillsFrame">
+            <div id="skillsContainer">
+                <div id="skillsTitleContainer">
+                    <div id="skillsTitleFrame">
+                        <div id="skillsTitleBackground">
+                            <div id="skillsTitle">Skills</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="skillIconsFrame">
+                    <div id="skillIconsContainer">
+                        <div id="skillIconsCol" class="skillIconsCol">
+                            <div class="skillCard">
+                                <div>
+                                    <img class="skillIcon" src="x" alt="">
+                                </div>
+                                <div>
+                                    <p>y</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </header>
+        </div>
 
-        <div id="loader"></div>
+        <div>
+            <h2>Content</h2>
+            <ul>
+                <li><a href="experties.html"> Experties </a></li>
+                <li><a href="hobbies.html"> Hobbies </a></li>
+                <li><a href="tasteOfCoffee.html"> Share your taste of coffee </a></li>
+                <li><a href="ttt.html"> Tic Tac Toe </a></li>
+                <li><a href="ayahGenerator.html"> Ayah Generator </a></li>
+                <li><a href="contactMe.html"> Contact me </a></li>
+            </ul>
+        </div>
+    </article>
 
-        <article id="content">
-            <section class="frame">
-                <div class="container">
-                    <section class="picContainer">
-                        <div class="picFrame">
-                            <div class="picBackground"></div>
-                            <img class="pic" src="assets/pp.png"/>
-                        </div>
-                    </section>
+    <div id="screensaver"></div>
 
-                    <section id="welcomeTextContainer">
-                        <div id="welcomeText">
-                            <div><h1>Hi, I'm Ali 👋</h1></div>
-                            <div><p>I'm a Junior Software Engineer at KFUPM interested in web & mobile development, and UI/UX design.</p></div>
-                        </div>
+    <script src="script.js"></script>
 
-                        <div id="availabilityContainer">
-                            <div id="location">
-                                <div class="material-symbols-outlined">
-                                    location_on
-                                </div>
-                                <div><p>Qatif, Saudi Arabia</p></div>
-                            </div>
-
-                            <div id="availability">
-                                <div id="availableFlagContainer">
-                                    <div id="availableFlag"></div>
-                                </div>
-                                <div><p>Available for new projects</p></div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section>
-                        <div id="actions">
-                            <div id="actionsContainer">
-                                <div id="gitHubActionContainer">
-                                    <a href="https://github.com/l3b3al" target="_blank"><img id="gitHubAction" src="assets/github.png" alt=""></a>
-                                </div>
-
-                                <div id="twitterActionContainer">
-                                    <a href="https://twitter.com/l3b3al" target="_blank"><img id="twitterAction" src="assets/twitter.png" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </section>
-
-            <div id="skillsFrame">
-                <div id="skillsContainer">
-                    <div id="skillsTitleContainer">
-                        <div id="skillsTitleFrame">
-                            <div id="skillsTitleBackground">
-                                <div id="skillsTitle">Skills</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="skillIconsFrame">
-                        <div id="skillIconsContainer">
-                            <div id="skillIconsCol" class="skillIconsCol">
-                                <div class="skillCard">
-                                    <div>
-                                        <img class="skillIcon" src="x" alt="">
-                                    </div>
-                                    <div><p>y</p></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </article>
-
-        <script src="script.js"></script>
-
-        <!--
+    <!--
         <nav>
             <h2>Content</h2>
             <ul>
@@ -124,5 +159,6 @@
         </footer>
         -->
 
-    </body>
+</body>
+
 </html>
