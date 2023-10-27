@@ -1,4 +1,4 @@
-let skills = [
+const skills = [
     {
         "icon" : "assets/git.png",
         "header" : "Git"
@@ -11,21 +11,22 @@ let skills = [
         "icon" : "assets/java.png",
         "header" : "Java"
     }
-]
+];
 
-function fillSkills(){
-    document.getElementById("skillIconsCol").innerHTML = ""
-    for(let skill of skills){
-        let content = `
-            <div class="skillCard">
-                <div>
-                    <img class="skillIcon" src="${skill.icon}" alt="">
-                </div>
-                <div><p>${skill.header}</p></div>
+const fillSkills = () => {
+    const skillIconsCol = document.getElementById("skillIconsCol");
+    skillIconsCol.innerHTML = "";
+
+    const content = skills.map(skill => `
+        <div class="skillCard">
+            <div>
+                <img class="skillIcon" src="${skill.icon}" alt="">
             </div>
-        `
-        document.getElementById("skillIconsCol").innerHTML += content
-    }
-}
+            <div><p>${skill.header}</p></div>
+        </div>
+    `).join('');
+
+    skillIconsCol.innerHTML = content;
+};
 
 fillSkills();

@@ -5,6 +5,7 @@
     <title> Ayah Generator </title>
     <meta name="keywords" content="KFUPM, SWE, Software Engineering">
 </head>
+
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
@@ -77,6 +78,14 @@
 </body>
 
 <script>
+    class Ayah {
+        constructor(text) {
+            this.text = text;
+        }
+    }
+
+    const ayahs = [];
+
     document.getElementById('generate').addEventListener('click', function () {
         generateAyah();
     });
@@ -87,9 +96,12 @@
         console.log(allAyat);
 
         let randomAyahNumber = Math.floor(Math.random() * allAyat.verses.length);
+        const ayahText = allAyat.verses[randomAyahNumber].text_uthmani;
 
-        document.getElementById('ayah').innerHTML = allAyat.verses[randomAyahNumber].text_uthmani;
-        
+        const newAyah = new Ayah(ayahText);
+        ayahs.push(newAyah);
+
+        document.getElementById('ayah').innerHTML = newAyah.text;
     }
 </script>
 

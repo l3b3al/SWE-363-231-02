@@ -1,18 +1,16 @@
 let timeout;
 const screensaverElement = document.getElementById('screensaver');
 
-function resetTimer() {
+const resetTimer = () => {
     clearTimeout(timeout);
     screensaverElement.style.display = 'none';
-    timeout = setTimeout(showScreensaver, 60000);
-}
+    timeout = setTimeout(() => {
+        screensaverElement.style.display = 'block';
+        initScreensaver();
+    }, 60000);
+};
 
-function showScreensaver() {
-    screensaverElement.style.display = 'block';
-    initScreensaver();
-}
-
-function initScreensaver() {
+const initScreensaver = () => {
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -26,14 +24,14 @@ function initScreensaver() {
 
     camera.position.z = 30;
 
-    function animate() {
+    const animate = () => {
         requestAnimationFrame(animate);
         icosahedron.rotation.x += 0.01;
         icosahedron.rotation.y += 0.01;
         renderer.render(scene, camera);
-    }
+    };
     animate();
-}
+};
 
 document.addEventListener('mousemove', resetTimer);
 document.addEventListener('keypress', resetTimer);
