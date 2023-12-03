@@ -8,74 +8,20 @@
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
-    * {
-        padding: 0px;
-        margin: 0px;
-    }
-
-    body {
-        background-color: #030712;
-        font-family: 'Inter', sans-serif;
-        color: #D1D5DB;
-        word-wrap: break-word;
-        font-weight: 400;
-        font-size: 16px;
-    }
-
-    #container {
-        padding: 64px 16px;
-        flex: 1 1 0;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 48px;
-        display: inline-flex;
-        height: 100%;
-        width: 100%;
-    }
-
-    #heading {
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        display: flex;
-        gap: 16px;
-    }
-
-    #ayahC {
-        background-color: #374151;
-        height: 256px;
-        width: 512px;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        display: flex;
-        border-radius: 15px;
-    }
-
-    #generate {
-        background-color: #3C096C;
-        color: #D1D5DB;
-        font-size: 24px;
-        padding: 16px 24px;
-        border-radius: 15px;
-        border-width: 0px;
-    }
 </style>
 
-<body>
-    <div id="container">
-        <div id="heading">
+<body class="bg-[#030712] text-[#D1D5DB] break-words font-normal text-base">
+    <div id="container" class="py-16 px-4 flex-1 flex-col items-center gap-12 inline-flex h-full w-full">
+        <div id="heading" class="flex-col justify-between items-center flex gap-4">
             <h1>Generate Ayah</h1>
             <p>A random ayah generator</p>
         </div>
-        <div id="ayahC">
+        <div id="ayahC" class="bg-[#374151] h-[256px] w-[512px] flex-col justify-around items-center flex rounded-lg">
             <div>
                 <p id="ayah"></p>
             </div>
         </div>
-        <div><button id="generate">Generate</button></div>
+        <div><button id="generate" class="bg-[#3C096C] text-[#D1D5DB] text-xl py-4 px-6 rounded-lg border-0">Generate</button></div>
     </div>
 </body>
 
