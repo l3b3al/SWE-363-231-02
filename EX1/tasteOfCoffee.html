@@ -5,6 +5,13 @@
     <title> Share Your Taste of Coffee </title>
     <meta name="keywords" content="KFUPM, SWE, Software Engineering">
     <link rel="stylesheet" href="exercise2.css">
+    <style>
+        #signaturePad {
+            border: 2px solid #222;
+            width: 500px;
+            height: 300px;
+        }
+    </style>
 </head>
 
 <style>
@@ -20,7 +27,7 @@
         <h1> Share Your Taste of Coffee </h1>
         <fieldset>
             <legend> Fill the form to recieve a beans reccomendation! </legend>
-            <form action="confirmationPage.html">
+            <form action="/submit-form" method="post">
                 <h4> General Information </h4>
                 <div>
                     <label for="name"> Name: </label>
